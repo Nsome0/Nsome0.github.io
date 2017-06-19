@@ -1,0 +1,80 @@
+.main-head{
+	margin-top: 81px;
+}
+.main-logo-hat{
+	width: 150px;
+	height: 55px;
+	border-radius: 5px;
+	border: 3px solid grey;
+	text-align: center;
+	// margin-top: 30px; По пацански сделаем! ;)
+	line-height: 50px;
+}
+.main-logo-hat p{
+	font-family: 'Open Sans',sans-serif;
+	font-weight: 600;
+	font-size: 36px;
+	color: grey;
+}
+.color-logo {
+	color: red;
+}
+.main-navig{
+	position: relative;
+	float: right;
+	width: 30px;
+}
+.line {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	display: inline-block;
+	position: absolute;
+	width: 35px;
+	height: 3px;
+	background-color: grey;
+	right: 0;
+	top: 50%;
+	-webkit-transform: translateY(-1px);
+	-ms-transform: translateY(-1px);
+	-o-transform: translateY(-1px);
+	transform: translateY(-1px);
+}
+.line:before {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	-webkit-transform: translateY(-7px);
+	-ms-transform: translateY(-7px);
+	-o-transform: translateY(-7px);
+	transform: translateY(-7px);
+	content: '';
+	width: 35px;
+	height: 3px;
+	background-color: grey;
+}
+.line:after{
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	-webkit-transform: translateY(5px);
+	-ms-transform: translateY(5px);
+	-o-transform: translateY(5px);
+	transform: translateY(5px);
+	content: '';
+	width: 35px;
+	height: 3px;
+	background-color: grey;
+}
