@@ -1,3 +1,396 @@
-.line{
-	color: @grey;
+/* Шрифты */
+.opn-bold{
+	font-family: 'Open sans' sans-serif;
+	font-weight:600;
+}
+.opn-reg{
+	font-family: 'Open sans' sans-serif;
+	font-weight: 400;
+}
+/* Цввет для обводки Main-logo и для Бургера */
+@color-grey: #706b73;
+/* Цвет текста под 'span' */
+@lighten-color-red:#fc7254;
+/* Цвет буквы лого */
+@color-main-logo:#fa9a87;
+/* Установим цвет для Main-text-center, и для текста формы. */
+@main-text-center:#6e6e6e;
+/* Цвет Заголовка */
+@color-main-hd: #f5f5f5;
+/* Цвет для формы БГЦ */
+@white: #FFFFFF;
+/* Цвета блоков */
+@color-tomi: #4eb2f7;
+@color-set: #c049f8;
+@color-setting: #817eff;
+@color-lara: #f74770;
+/* Простые цвета. */
+@white: #FFFFFF;
+@black: #000000;
+/* Цвета сервиса */
+@bg-services: #fbfbfb;
+@bg-black:#000000;
+/* Начало */
+input,button, textarea{
+	&:focus{
+		outline: none;
+	}
+}
+section{
+	padding-top: 10%;
+	padding-bottom: 10%;
+}
+.section-header{
+		h2{
+		font-size: 50px;
+		.opn-bold;
+		span{
+			color: #fa9a87;
+		}
+		p{
+			font-size: 16px;
+		}
+	 }
+}
+/* Main photo Header */
+header{
+	background: @color-main-hd url(../img/main.jpg) no-repeat center center;
+	background-size: cover;
+	min-height: 700px;
+	height: 100vh;
+}
+.main{
+	&-text{
+		margin-top:10%;
+		text-align:center;
+		/*Сложновато со шрифтами, когда у тебя не настроен быстрый класс...*/
+		h1{
+			font-size: 50px;
+			.opn-bold;
+			color: @main-text-center;
+		span{
+			color: lighten(@lighten-color-red,15%);
+		}
+		}
+		p{
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+	&-form{
+		&-btn{
+			background-color: orange;
+			border: none;
+			padding: 15px 35px;
+			color: @white;
+			display: block;
+			margin: 0 auto;
+			margin-top: 30px;
+			font-size: 14px;
+			-webkit-border-radius: 27px;
+			-moz-border-radius: 27px;
+			-ms-border-radius: 27px;
+			-o-border-radius: 27px;
+			border-radius: 27px;
+			&:hover{
+				box-shadow: 0px 11px 20px 0px rgba(20, 20, 21, 0.08)
+			}
+		}
+		margin-top: 10%;
+		background-color: @white;
+		padding: 35px;
+		-webkit-box-shadow: 0px 0px 57px 0px rgba(20,20,21,0.2);
+		box-shadow: 0px 0px 57px 0px rgba(20,20,21,0.2);
+		-webkit-border-radius: 2px;
+		-moz-border-radius: 2px;
+		-ms-border-radius: 2px;
+		-o-border-radius: 2px;
+		border-radius: 2px;
+		&-hr{
+			text-align:center;
+			font-size: 20px;
+				.opn-bold;
+			span{
+				color: @lighten-color-red;
+			}
+		}
+		input,textarea{
+			margin-top: 35px;
+			width: 100%;
+			border:none;
+			border-bottom: 1px solid @main-text-center;
+			font-size: 15px;
+		}
+	}	
+}
+.text{
+	&-test{
+		margin-top: 20px;
+	}
+}
+.main-head{
+	margin-top: 45px;
+}
+.main-logo-hat{
+	width: 150px;
+	height: 55px;
+	border-radius: 5px;
+	border: 3px solid @color-grey;
+	text-align: center;
+	// margin-top: 30px; По пацански сделаем! ;)
+	line-height: 50px;
+	color: @main-text-center;
+}
+.main-logo-hat p{
+	font-family: 'Open Sans',sans-serif;
+	font-weight: 600;
+	font-size: 36px;
+	color: @color-grey;
+}
+.color-logo {
+	color: @color-main-logo;
+}
+.main-navig{
+	position: relative;
+	float: right;
+	width: 30px;
+}
+.line {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	display: inline-block;
+	position: absolute;
+	width: 35px;
+	height: 3px;
+	background-color: @color-grey;
+	right: 0;
+	top: 50%;
+	-webkit-transform: translateY(-1px);
+	-ms-transform: translateY(-1px);
+	-o-transform: translateY(-1px);
+	transform: translateY(-1px);
+}
+.line:before {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	-webkit-transform: translateY(-7px);
+	-ms-transform: translateY(-7px);
+	-o-transform: translateY(-7px);
+	transform: translateY(-7px);
+	content: '';
+	width: 35px;
+	height: 3px;
+	background-color: @color-grey;
+}
+.line:after{
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	-webkit-transform: translateY(5px);
+	-ms-transform: translateY(5px);
+	-o-transform: translateY(5px);
+	transform: translateY(5px);
+	content: '';
+	width: 35px;
+	height: 3px;
+	background-color: @color-grey;
+}
+/* Process section */
+/* Данные для камеры, были скропированы из свойста css, которое предоставил Фотошоп, так более по пацански;) */
+.process{
+	&-btn{
+			position: absolute;
+			left: 50%;
+			bottom: -30px;
+			margin-left: -40%;
+			border:none;
+			color: @black;
+			padding: 18px;
+			-webkit-border-radius: 50px;
+			-moz-border-radius: 50px;
+			-ms-border-radius: 50px;
+			-o-border-radius: 50px;
+			border-radius: 50px;
+			background-color: @white;
+			width: 80%;
+			font-size: 16px;
+			.opn-reg;
+			&:hover{
+				box-shadow: 0px 6px 14px 0px rgba(20, 20, 21, 0.09);
+			}
+		}
+	&-box{
+		height: 250px;
+		margin-top: 50px;
+		i.fa-camera-retro{
+			font-size: 50px;
+		  	-moz-transform: matrix( 0.88035758637798,-0.29375297821771,0.29375297821772,0.88035758637801,0,0);
+		  	-webkit-transform: matrix( 0.88035758637798,-0.29375297821771,0.29375297821772,0.88035758637801,0,0);
+		  	-ms-transform: matrix( 0.88035758637798,-0.29375297821771,0.29375297821772,0.88035758637801,0,0);
+		  	transform: matrix( 0.88035758637798,-0.29375297821771,0.29375297821772,0.88035758637801,0,0);	  	
+		}
+		i.fa-magnet, i.fa-bug,i.fa-cogs{
+			font-size: 50px;
+		}
+		color: @white;
+		text-align: center;
+		padding: 25px;
+		h3{
+			margin-top: 15px;
+			font-size: 20px;
+			.opn-bold;
+		}
+		p{
+			margin-top: 25px;
+			font-size: 15px;
+			.opn-reg;
+		}
+		&:hover{
+			box-shadow: 0px 0px 35px 0px rgba(20, 20, 21, 0.21);
+			transition: 0.2s;
+		}
+	}
+}
+.btn-plus{
+	vertical-align: middle;
+	width: 15px;
+	height: 2px;
+	display: inline-block;
+	background-color: @black;
+	margin-right: 5px;
+	&:before{
+		display: inline-block;
+		content:'';
+		width: 16px;
+		height: 2px;
+		background-color: @black;
+		position: absolute;
+		-webkit-transform: rotate(90deg) translateY(8px);
+		-ms-transform: rotate(90deg) translateY(8px);
+		-o-transform: rotate(90deg) translateY(8px);
+		transform: rotate(90deg) translateY(8px);
+	}
+}
+.box{
+		&-tomi{
+		background-color:@color-tomi;
+	}
+		&-set{
+		background-color:@color-set;
+	}
+		&-setting{
+		background-color:@color-setting;
+	}
+		&-lara{
+		background-color:@color-lara;
+	}
+}
+/* Works section */
+.works{
+	&-row{
+		margin-top: 2%;
+	}
+	&-box{
+		height: 360px;
+		position: relative;
+	}
+}
+.signature{
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0, 0.8);
+	color: @white;
+	text-align: center;
+	display: -webkit-flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	-webkit-align-items: center;
+	-webkit-transition: opacity 0.2s;
+	-o-transition: opacity 0.2s;
+	transition: opacity 0.2s;
+	&:hover{
+		opacity: 1;
+	}
+}
+.sign{
+	p{
+		.opn-bold;
+		font-size: 22px;
+	}
+	button{
+		border: none;
+		padding: 15px 35px;
+		-webkit-border-radius: 50px;
+		-moz-border-radius: 50px;
+		-ms-border-radius: 50px;
+		-o-border-radius: 50px;
+		border-radius: 50px;
+		background-color: #fc7254;
+	}
+}
+/* services_section */
+.services{
+	&-list{
+		list-style: none;
+		&-item{
+			display: block;
+			margin: 5px auto;
+			height: 100px;
+			width: 100px;
+			text-align: center;
+			background-color: @bg-services;
+		}
+	}
+	&-info{
+		margin-left: 75px;
+		h4{
+			font-size:30px;
+		}
+		p{
+			font-size: 15px;
+		}
+	}
+	&-line{
+		width: 65px;
+		height: 3px;
+		background-color: @color-main-logo;
+		display: inline-block;
+		margin-bottom: 10px;
+		margin-top: 10px;
+	}
+	&-btn{
+		background-color: white;
+		border: none;
+		border: 1px solid lighten(#000000,80%);
+		padding: 15px 55px;
+		color: @color-grey;
+		margin-top: 60px;
+		font-size: 16px;
+		-webkit-border-radius: 27px;
+		-moz-border-radius: 27px;
+		-ms-border-radius: 27px;
+		-o-border-radius: 27px;
+		border-radius: 27px;
+		box-shadow: 0px 11px 20px 0px rgba(20, 20, 21, 0.08)
+	}
 }
